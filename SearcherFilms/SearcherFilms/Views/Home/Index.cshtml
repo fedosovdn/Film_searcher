@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Поиск фильма</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("FilmInfo", "Home", FormMethod.Get))
+        {
+            <h3>Поиск фильма </h3>
+            <input type="text" name="TextOfSearch" size="50%" />
+            <table width="28%">
+                <tr>
+                    <td>
+                        <input type="radio" name="typeOfSearhing" value="byNameFilm" checked> по названию<br>
+                        <input type="radio" name="typeOfSearhing" value="byNameActor"> по имени актера<br>
+                        <input type="radio" name="typeOfSearhing" value="byGanre"> по жанру<br>
+                    </td>
+                    <td align="right">
+                        <input type="submit" value="Поиск" />
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>

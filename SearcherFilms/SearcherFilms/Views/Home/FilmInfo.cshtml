@@ -1,0 +1,33 @@
+﻿@model IQueryable<SearcherFilms.Models.Film>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FilmInfo</title>
+</head>
+<body>
+    <div>
+        @foreach (var film in Model)
+        {
+            <table align="center" width="50%">
+                <tr>
+                    <td>
+                        <img src=@Url.Content(film.Image) height="37%" />
+                    </td>
+                    <td>
+                        <h1>@film.Name</h1>
+                        <br>
+                        <h2>@film.Ganre</h2>
+                        <br>
+                        <p>@film.Description</p>
+                    </td>
+                </tr>
+            </table>
+            <hr size="5">
+        }
+    </div>
+</body>
+
+</html>
